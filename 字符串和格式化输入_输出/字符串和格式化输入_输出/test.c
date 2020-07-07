@@ -127,5 +127,39 @@ int main()
 	printf("%ld  %ld\n", n3, n4);
 	printf("%ld %ld %ld %ld\n", n1, n2, n3, n4);
 	*/
+
+	/*
+	//printf(函数的返回值
+	int num = 202;
+	int sum;
+	sum = printf("%d ,Hello world\n", num);
+	printf("printf()函数打印了%d个字符!\n", sum);
+	*/
+
+	/*unsigned int width, number;
+	int num = 256;       
+	double weight = 159.6;
+	printf("请输入字段宽度: ");
+	scanf("%d", &width);
+	printf("num = %*d!\n", width, num);     
+	printf("请输入字段宽度及保留位数: ");
+	scanf("%d %d", &width, &number);
+	printf("weight = %*.*f!\n", width, number, weight);*/
+
+	/*
+	int n;
+	printf("请打印输入的第三个数: ");
+	scanf("%*d %*d %d", &n);
+	printf("%d\n", n);
+	*/
+	
+	/*
+	//复习题1
+	char name[40];
+	printf("请输入你的名字: ");
+	scanf("%s", name);
+	printf("你的名字是: %s!\n", name);
+	*/
+
 	return 0;
 }
