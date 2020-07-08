@@ -2,7 +2,7 @@
 
 int main()
 {
-	/*
+	
 	int num;
 	int sum = 0;
 	int status;
@@ -15,7 +15,7 @@ int main()
 		status = scanf("%d", &num);
 	}
 	printf("最终相加的结果为: %d", sum);
-	*/
+	
 	//printf("Hello world!\n");
 	return 0;
 }
