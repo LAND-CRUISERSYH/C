@@ -3,6 +3,9 @@
 #define DENSITY 62.4          //人体密度(单位: 磅/立方英尺)
 #define INTRODUCE "我是一个陕西人"
 #define PI 3.14159            //定义符号常量PI
+#define B "booboo"
+#define X 10
+#define BOOK "War and Peace"
 
 int main()
 {
@@ -160,6 +163,132 @@ int main()
 	scanf("%s", name);
 	printf("你的名字是: %s!\n", name);
 	*/
+	
+	/*
+	//复习题3
+	printf("\"Hello world!\"\n");
+	*/
+	
+	/*
+	//复习题4
+	int age;
+	char name[40];
+	int xp;
+	printf("请输入你的名字: ");
+	scanf("%s", name);
+	printf("%s,你的年龄是: ", name);
+	scanf("%d", &age);
+	xp = age + X;
+	printf("这是%s,他的年龄是: %d", B, xp);
+	*/
 
+	/*
+	//复习题5
+	double cost = 12.99;
+	float percent = 80.0;
+	printf("This copy of \"%s\" sells for $%.2f.\n", BOOK, cost);
+	printf("That is %d%% of list.",(int)percent);
+	*/
+	
+	/*
+	//复习题9
+	int a;
+	scanf("%d", &a);
+	char c[20];
+	scanf("%s", c);
+	char d[10];
+	int d1;
+	scanf("%s %d", d, &d1);
+	char e[10];
+	int e1;
+	scanf("%*s %d", &e1);
+	*/
+
+	/*
+	//编程练习1
+	char firstname[10];
+	char lastname[10];
+	printf("请输入名字: ");
+	scanf("%s", lastname);
+	printf("请输入姓氏: ");
+	scanf("%s", firstname);
+	printf("欢迎%s,%s!", lastname, firstname);
+	*/
+	
+	/*
+	//编程练习2
+	char name[20];
+	printf("请输入名字和姓氏: ");
+	scanf("%s", name);
+	int str = strlen(name);
+	int width = strlen(name) + 3;
+	printf("欢迎\"%s\"!\n", name);
+	printf("欢迎\"%+20s\"!\n", name);
+	printf("欢迎\"%-20s\"!\n", name);
+	printf("欢迎%-*.*s!",width,str,name );
+	*/
+
+	/*
+	//编程练习3
+	float number;
+	scanf("%f", &number);
+	printf("%f\n", number);
+	printf("%e", number);
+	*/
+	
+	/*
+	//编程练习4
+	float high;
+	char name[40];
+	printf("请输入身高: ");
+	scanf("%f", &high);
+	printf("请输入姓名: ");
+	scanf("%s", name);
+	printf("%s,you are %.3f feet rall.\n", name, high);
+	*/
+
+	/*
+	//编程练习5
+	float v, size, times;
+	printf("请输入文件大小: ");
+	scanf("%f", &size);
+	printf("请输入下载速度: ");
+	scanf("%f", &v);
+	times = (size * 8) / v;
+	printf("At %.2f megabits per second,a file of %.2f megabytes.\n", v, size);
+	printf("downloads in %.2f seconds.", times);
+	*/
+
+	/*
+	编程练习6
+	char firstname[10];
+	char lastname[10];
+	printf("请输入名字: ");
+	scanf("%s", lastname);
+	printf("请输入姓氏: ");
+	scanf("%s", firstname);
+	int strfirst = strlen(firstname);
+	int strlast = strlen(lastname);
+	printf("%s %s\n", lastname, firstname);
+	printf("%*.d%*.d\n", strlast, strlast, strfirst+ 1, strfirst);
+	printf("%-*.d %-*.d", strlast, strlast, strfirst + 1, strfirst);
+	*/
+	
+	/*
+	//编程练习8
+	float length;
+	float Consumption;
+	printf("请输入里程: ");
+	scanf("%f", &length);
+	printf("请输入耗油量: ");
+	scanf("%f", &Consumption);
+	float num = length / Consumption;
+	printf("消耗每加仑汽油行驶的英里数为: %.1f\n", num);
+	const float oil = 3.785;
+	const float mile = 1.609;
+	float Consumption1 = oil * Consumption;
+	float length1 = mile * length/100;
+	printf("消耗每升汽油行驶的公里数为: %.1f", length1 / Consumption1);
+	*/
 	return 0;
 }
