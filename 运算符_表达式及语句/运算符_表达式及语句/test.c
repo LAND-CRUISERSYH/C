@@ -244,19 +244,20 @@ int main()
 	printf("输入的数字无意义!\n");
 	*/
 
-	/*
+	
 	//编程练习9
 	double Tem;
+	int status;
 	printf("请输入一个华氏温度: ");
-	scanf("%lf", &Tem);
-	while ((Tem<'a'||Tem>'z') && (Tem < 'A'||Tem>'Z'))
+	status = scanf("%lf", &Tem);
+	while (status == 1)
 	{
 		Temperatures(Tem);
 		printf("请输入一个华氏温度: ");
-		scanf("%lf", &Tem);
+		status = scanf("%lf", &Tem);
 	}
 	printf("输入的温度无意义!");
-	*/
+	
 	//printf("Hello world!\n");
 	return 0;
 }
