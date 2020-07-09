@@ -6,6 +6,7 @@
 double power(double n, int p);
 long square(int n);
 double Test_9(double a, double b);
+double money(int i);
 
 int main()
 {
@@ -312,12 +313,104 @@ int main()
 	printf("输入有误!\n");
 	*/
 
+	/*
 	//编程练习13
-	
+	int arr[8];
+	int n = 2;
+	int i;
+	for (i = 0; i < 8; i++)
+	{
+		n = 2;
+		for (int j = 0; j <=i;j++,n = n*2)
+		{			
+			arr[i] = 1 * n;
+		}
+	}
+	i = 0;
+	do
+	{
+		printf("%d ", arr[i]);
+		i++;
+	} while (i < 8);
+	*/
+
+	/*
+	//编程练习14
+	double arr1[8];
+	double arr2[8];
+	printf("请输入8个double类型的值: ");
+	for (int i = 0; i < 8; i++)
+	{
+		scanf("%lf", &arr1[i]);
+	}
+	arr2[0] = arr1[0];
+	for (int j = 1; j < 8; j++)
+	{
+		arr2[j] = arr2[j - 1] + arr1[j];
+	}
+	for (int x = 0; x < 8; x++)
+	{
+		printf("%.2f  ", arr1[x]);
+	}
+	printf("\n");
+	for (int x = 0; x < 8; x++)
+	{
+		printf("%.2f  ", arr2[x]);
+	}
+	*/
+
+	/*
+	//编程练习15
+	char arr[255];
+	int i = 0;
+	while (scanf("%c",&arr[i])==1&&arr[i]!='\n')
+	{
+		i++;
+	}
+	for (int j = i - 1; j >= 0; j--)
+	{
+		printf("%c", arr[j]);
+	}*/
+
+	/*
+	//编程练习16
+	int i = 1;
+	while ((10*i)>money(i))
+	{
+		i++;
+	}
+	printf("第%d年投资额反超!",i);
+	*/
+
+	/*
+	//编程练习17
+	int i = 1;
+	double balance = 100;
+	while (balance>10)
+	{
+		balance = balance + (balance*0.08);
+		balance -= 10;
+		i++;
+	}
+	printf("第%d年会取完所有的钱!",i);
+	*/
+
+	/*
+	//编程练习18
+	int i = 0;
+	int sum = 5;
+	do
+	{
+		i++;
+		sum = sum - i;
+		sum = sum * 2;
+		printf("第%d周有%d个朋友.\n", i, sum);
+	} while (sum <= 150);
+	*/
 	//printf("Hello world!\n");
 	return 0;
 }
-
+	
 double power(double n, int p)
 {
 	double pow = 1.00;
@@ -337,4 +430,21 @@ double Test_9(double a, double b)
 	double c;
 	c = (a - b) / (a*b);
 	return c;
+}
+
+double money(int i)
+{
+	double Money = 5.0;
+	if (i == 1)
+	{
+		Money = 5;
+	}
+	else
+	{
+		for (int j = 0; j < i; j++)
+		{
+			Money = (Money + Money / 0.05) * 0.05;
+		}
+	}
+	return Money;
 }
