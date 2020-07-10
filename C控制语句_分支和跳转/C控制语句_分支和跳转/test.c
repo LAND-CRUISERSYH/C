@@ -106,7 +106,7 @@ int main()
 	printf("正确退出!\n");
 	*/
 
-	
+	/*
 	float length, width;
 	printf("请输入矩形的长: ");
 	while (scanf("%f", &length) == 1)
@@ -120,8 +120,8 @@ int main()
 		printf("请输入矩形的长: ");
 	}
 	printf("正确退出!\n");
+	*/
 	
-
 	
 	//printf("Hello world!\n");
 	return 0;
