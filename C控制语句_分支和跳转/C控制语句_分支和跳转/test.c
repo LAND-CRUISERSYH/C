@@ -324,7 +324,7 @@ int main()
 	printf("正确退出!\n");
 	*/
 
-	/*
+	
 	//编程练习8
 	int choice = 0;
 	float hours;
@@ -429,7 +429,7 @@ int main()
 		}
 		printf("请输入正确的选项!\n");
 	}
-	*/
+	
 	//printf("Hello world!\n");
 	return 0;
 }
