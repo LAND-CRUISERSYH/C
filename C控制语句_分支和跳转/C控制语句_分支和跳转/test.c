@@ -106,7 +106,7 @@ int main()
 	printf("正确退出!\n");
 	*/
 
-	
+	/*
 	float length, width;
 	printf("请输入矩形的长: ");
 	while (scanf("%f", &length) == 1)
@@ -120,9 +120,27 @@ int main()
 		printf("请输入矩形的长: ");
 	}
 	printf("正确退出!\n");
+	*/
 	
-	
-	
+	char ch;
+	while ((ch = getchar()) != '#')
+	{
+		if (ch != '\n')
+		{
+			printf("Step 1\n");
+			if (ch == 'b')
+			{
+				break;
+			}
+			else if (ch != 'c')
+			{
+				if (ch != 'h')
+					printf("Step 2\n");
+				printf("Step 3\n");
+			}
+		}
+	}
+	printf("Done \n");
 	//printf("Hello world!\n");
 	return 0;
 }
