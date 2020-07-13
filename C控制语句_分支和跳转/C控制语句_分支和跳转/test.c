@@ -324,7 +324,7 @@ int main()
 	printf("正确退出!\n");
 	*/
 
-	
+	/*
 	//编程练习8
 	int choice = 0;
 	float hours;
@@ -429,7 +429,181 @@ int main()
 		}
 		printf("请输入正确的选项!\n");
 	}
+	*/
 	
+	/*
+	//编程练习9
+	int num;
+	int flag;
+	int n = 0;
+	while (1)
+	{
+		printf("请输入一个正整数: ");
+		flag = scanf("%d", &num);
+		if ((flag==1)&&(num>0))
+		{
+			for (int i = 2; i <= num; i++)
+			{
+				n = 0;
+				for (int j = 1; j <= i; j++)
+				{
+					if (i%j == 0)
+						n++;
+				}
+				if (n == 2)
+					printf("%d \n", i);
+			}
+		}
+		else if ((flag==0)||(num<0))
+		{
+			printf("请正确输入!\n");
+			continue;
+		}
+		else if (num == 0)
+			break;
+	}
+	printf("正确退出!\n");
+	*/
+	
+	/*
+	//编程练习10
+	char ch;
+	float wages;
+	while (1)
+	{
+		printf("请输入您的工资: ");
+		scanf("%f", &wages);
+		if (wages == 0)
+			break;
+		getchar();
+		printf("请输入您的类别: ");
+		ch = getchar();
+		switch (ch)
+		{
+		case'A':		//单身
+			if (wages <= 17850)
+				printf("税金为: %.2f\n", wages*0.15);
+			else
+				printf("税金为: %.2f\n", 17850 * 0.15 + (wages - 17850)*0.28);
+			continue;
+		case'B':		//户主
+			if (wages <= 23900)
+				printf("税金为: %.2f\n", wages*0.15);
+			else
+				printf("税金为: %.2f\n", 23900 * 0.15 + (wages - 23900)*0.28);
+			continue;
+		case'C':		//已婚共有
+			if (wages <= 29750)
+				printf("税金为: %.2f\n", wages*0.15);
+			else
+				printf("税金为: %.2f\n", 29750 * 0.15 + (wages - 29750)*0.28);
+			continue;
+		case'D':		//已婚离异
+			if (wages <= 14875)
+				printf("税金为: %.2f\n", wages*0.15);
+			else
+				printf("税金为: %.2f\n", 14875 * 0.15 + (wages - 14875)*0.28);
+			continue;
+		}
+	}
+	printf("正确退出!");
+	*/
+
+	//编程练习11
+	float Artichoke;              //洋蓟
+	float sum_a = 0;
+	float beet;						//甜菜
+	float sum_b = 0;
+	float carrot;					//胡萝卜
+	float sum_c = 0;
+	char ch;
+	while (1)
+	{
+		printf("**************************************\n");
+		printf("a)洋蓟: 2.05                      b)甜菜: 1.15\n");
+		printf("c)胡萝卜: 1.09                   q)退出订购 \n");
+		printf("**************************************\n");
+		printf("请输入您要订购的蔬菜: ");
+		ch = getchar();
+		if (ch == 'q')
+		{
+			break;
+		}
+		else
+		{
+			switch (ch)
+			{
+			case 'a':
+				printf("请输入您要预定的磅数: ");
+				getchar();
+				scanf("%f", &Artichoke);
+				getchar();
+				sum_a = sum_a + Artichoke;
+				break;
+			case 'b':
+				printf("请输入您要预定的磅数: ");
+				getchar();
+				scanf("%f", &beet);
+				getchar();
+				sum_b = sum_b + beet;
+				break;
+			case 'c':
+				printf("请输入您要预定的磅数: ");
+				getchar();
+				scanf("%f", &carrot);
+				getchar();
+				sum_c = sum_c + carrot;
+				break;
+			}
+		}
+	}
+	if (sum_a != 0 || sum_b != 0 || sum_c != 0)
+	{
+		printf("订购蔬菜的总重量为: %.2f\n", sum_a + sum_b + sum_c);
+		printf("洋蓟: %.2f磅\n", sum_a);
+		printf("甜菜: %.2f磅\n", sum_b);
+		printf("胡萝卜: %.2f磅\n", sum_c);
+		printf("订购蔬菜的费用为: %.2f\n", sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09);
+		if ((sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09) >= 100)
+		{
+			printf("订单的折扣为: %.2f\n", (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09)*0.05);
+			if ((sum_a + sum_b + sum_c) <= 5)
+			{
+				printf("运费包装费为6.5美元!\n");
+				printf("费用总额为: %.2f美元!\n", (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09) - (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09)*0.05 + 6.5);
+			}
+			else if ((sum_a + sum_b + sum_c) > 5 && (sum_a + sum_b + sum_c) <= 20)
+			{
+				printf("运费包装费为14美元!\n");
+				printf("费用总额为: %.2f美元!\n", (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09) - (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09)*0.05 + 14);
+			}
+			else
+			{
+				printf("运费包装费为%.2f美元!\n", 14 + (sum_a + sum_b + sum_c - 20)*0.5);
+				printf("费用总额为: %.2f美元!\n", (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09) - (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09)*0.05 + (14 + (sum_a + sum_b + sum_c - 20)*0.5));
+			}
+		}
+		else
+		{
+			printf("订单小于100美元，无折扣!\n");
+			if ((sum_a + sum_b + sum_c) <= 5)
+			{
+				printf("费用总额为: %.2f美元!\n", (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09) + 6.5);
+			}
+			else if ((sum_a + sum_b + sum_c) > 5 && (sum_a + sum_b + sum_c) <= 20)
+			{
+				printf("运费包装费为14美元!\n");
+				printf("费用总额为: %.2f美元!\n", (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09) + 14);
+			}
+			else
+			{
+				printf("运费包装费为%.2f美元!\n", 14 + (sum_a + sum_b + sum_c - 20)*0.5);
+				printf("费用总额为: %.2f美元!\n", (sum_a*2.05 + sum_b * 1.15 + sum_c * 1.09) + (14 + (sum_a + sum_b + sum_c - 20)*0.5));
+			}
+		}
+	}
+	else
+		printf("正确退出!\n");
 	//printf("Hello world!\n");
 	return 0;
 }
