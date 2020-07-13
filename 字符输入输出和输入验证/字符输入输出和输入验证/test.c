@@ -118,7 +118,7 @@ int main()
 	printf("%c", get_first());
 	*/
 
-	
+	/*
 	//编程练习7
 	char ch;
 	float hours;
@@ -183,8 +183,64 @@ int main()
 			printf("请输入正确的选项!\n");
 	}
 	printf("正确退出!\n");
+	*/
 	
 	//编程练习8
+	float num1;
+	float num2;
+	int flag1, flag2;
+	char ch;
+	while (1)
+	{
+		printf("*********************************\n");
+		printf("a) +                                     s) -\n");
+		printf("m) *                                      d) /\n");
+		printf("q) quit\n");
+		printf("*********************************\n");
+		printf("请输入您的选项: ");
+		ch = getchar();
+		if (ch == 'q')
+			break;
+		printf("请输入第一个数字: ");
+		flag1 = scanf("%f", &num1);
+		getchar();
+		printf("请输入第二个数字: ");
+		flag2 = scanf("%f", &num2);
+		getchar();
+		if (flag1 != 1 || flag2 != 1)
+		{
+			printf("输入有误,请重新输入!\n");
+			continue;
+		}
+		switch (ch)
+		{
+		case 'a':
+			printf("%.2f + %.2f = %.2f\n", num1, num2, num1 + num2);
+			break;
+		case 's':
+			printf("%.2f - %.2f = %.2f\n", num1, num2, num1 - num2);
+			break;
+		case 'm':
+			printf("%.2f * %.2f = %.2f\n", num1, num2, num1 * num2);
+			break;
+		case 'd':
+			while (1)
+			{
+				if (num2 == 0)
+				{
+					printf("请重新输入第二个数: ");
+					scanf("%f", &num2);
+					getchar();
+				}
+				else
+				{
+					printf("%.2f / %.2f = %.2f\n", num1, num2, num1 / num2);
+					break;
+				}
+			}
+		}
+	}
+	printf("正确退出!\n");
 	return 0;
 }
 
