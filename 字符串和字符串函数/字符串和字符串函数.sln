@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "字符串和字符串函数", "字符串和字符串函数\字符串和字符串函数.vcxproj", "{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Debug|x64.ActiveCfg = Debug|x64
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Debug|x64.Build.0 = Debug|x64
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Debug|x86.ActiveCfg = Debug|Win32
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Debug|x86.Build.0 = Debug|Win32
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Release|x64.ActiveCfg = Release|x64
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Release|x64.Build.0 = Release|x64
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Release|x86.ActiveCfg = Release|Win32
+		{48C463DE-5D87-41A3-9ADA-63B5BB96FA8A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00F3F933-DC85-4DAE-B12F-CD54939EB349}
+	EndGlobalSection
+EndGlobal
