@@ -127,9 +127,11 @@
     <ClCompile Include="test.c" />
     <ClCompile Include="test_1_9.c" />
     <ClCompile Include="test_2.c" />
+    <ClCompile Include="test_7.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test_2.h" />
+    <ClInclude Include="test_7.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
