@@ -6,7 +6,7 @@
 #define BUFSIZE 4096
 #define SLEN 81
 
-void append(FILE *sourc, FILE *dest);
+void append(FILE *source, FILE *dest);
 char *s_gets(char *st, int n);
 
 int main(/*int argc,char *argv[]*/)
@@ -28,6 +28,7 @@ int main(/*int argc,char *argv[]*/)
 	if (setvbuf(fa, NULL, _IOFBF, BUFSIZE) != 0)
 	{
 		fputs("缓冲区创建失败\n", stderr);
+		exit(EXIT_FAILURE);
 	}
 	puts("请输入第一个源文件的名称(输入空行退出): ");
 	while (s_gets(file_src, SLEN) && file_src[0] != '\n')
@@ -35,7 +36,7 @@ int main(/*int argc,char *argv[]*/)
 		if (strcmp(file_src, file_app) == 0)
 			fputs("无法将文件添加至自身\n", stderr);
 		else if ((fs = fopen(file_src, "r")) == NULL)
-			fprintf(stderr, "%d没有打开\n", file_src);
+			fprintf(stderr, "%s没有打开\n", file_src);
 		else
 		{
 			if (setvbuf(fs, NULL, _IOFBF, BUFSIZE) != 0)
@@ -51,12 +52,16 @@ int main(/*int argc,char *argv[]*/)
 			fclose(fs);
 			files++;
 			printf("文件%s已添加\n", file_src);
-			puts("请输入下一个文件(输入换行退出): ");
+			puts("请输入下一个文件名称(输入换行退出): ");
 		}
 	}
 	printf("已添加%d个文件\n", files);
 	rewind(fa);
 	printf("%s 内容: \n", file_app);
+	while ((ch = getc(fa)) != EOF)
+		putchar(ch);
+	puts("显示完成");
+	fclose(fa);
 	/*
 	FILE *in, *out;                //声明两个指向FILE的指针
 	int ch;
@@ -97,4 +102,30 @@ int main(/*int argc,char *argv[]*/)
 	*/
 	//printf("hello world");
 	return 0;
+}
+
+void append(FILE *source, FILE *dest)
+{
+	size_t bytes;
+	static char temp[BUFSIZE];       //只分配一次
+	while ((bytes = fread(temp, sizeof(char), BUFSIZE, source)) > 0)
+		fwrite(temp, sizeof(char), bytes, dest);
+}
+char *s_gets(char *st, int n)
+{
+	char *p;
+	char *find;
+	p = fgets(st, n, stdin);
+	if (p)
+	{
+		find = strchr(st, '\n');         //查找换行符
+		if (find)
+			*find = '\0';
+		else
+		{
+			while (getchar() != '\n')
+				continue;
+		}
+	}
+	return p;
 }
