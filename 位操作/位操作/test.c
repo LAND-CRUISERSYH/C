@@ -33,11 +33,11 @@ void show_settings(const struct box_props *p);
 void func(int num, char *p);
 void show(const char *p);
 
-int main()
-{
-	int a = 5;
-	printf("%p \n", &a);
-	printf("%p \n", &a + 1);
+//int main()
+//{
+//	int a = 5;
+//	printf("%p \n", &a);
+//	printf("%p \n", &a + 1);
 	/*
 	double dx;
 	char ca;
@@ -77,8 +77,8 @@ int main()
 	}
 	*/
 	//printf("hello world");
-	return 0;
-}
+//	return 0;
+//}
 
 void show_settings(const struct box_props *p)
 {
